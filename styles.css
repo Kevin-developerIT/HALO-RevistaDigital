@@ -226,6 +226,7 @@ body, html {
     transition: transform 0.3s ease;
 }
 
+
 /* Hover para agrandar el pin */
 .pin:hover {
     transform: scale(1.2);
@@ -860,4 +861,80 @@ video::-webkit-media-controls-mute-button:hover {
 .video-section video::cue {
     font-size: 16px; /* Ajusta el tamaño de los subtítulos si están habilitados */
     color: white; /* Color del texto de los subtítulos */
+}
+
+.mapa-boton {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.info-popup {
+    display: none; /* Ocultar la información por defecto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.info-content {
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.info-popup img {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .info-popup {
+        width: 95%;
+        max-width: 90%;
+        padding: 15px;
+    }
+    
+    .info-content h3, .info-content p {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .info-popup {
+        padding: 10px;
+    }
+
+    .info-content h3 {
+        font-size: 1rem;
+    }
+
+    .info-content p {
+        font-size: 0.9rem;
+    }
+
+    .close-btn {
+        font-size: 18px;
+    }
 }

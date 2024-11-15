@@ -1,11 +1,12 @@
-
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapa Interativo Ciudad de México</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div id="main-content" style="display: none;"></div>
     <nav class="navbar">
@@ -28,125 +29,203 @@
             <div class="">
 
                 <div class="content-rect">
-                    <!-- <img src="/HALO-RevistaDigital/v2/img/mapabg.jpg" alt="Mapa de fondo" class="map-background"> -->
                     <img src="/img/PORTADA-mapa.png" alt="Mapa de fondo" class="background-image">
-                    
-                    <!-- Pin 1 -->
-                    <div class="pin" id="pin1" style="top: 50%; left: 57%;" >
-                        <div class="info">
-                            <a href="https://g.co/kgs/jmVwx26"><h3 class="blanco">Auditorio Nacional</h3></a>
-                            <p class="blanco">Descubre el Auditorio Nacional, uno de los principales recintos culturales de México.</p>
-                            <!-- <img src="/HALO-RevistaDigital/v2/img/auditorio.jpg" alt="Imagen relacionada 1" class="pin-image"> -->
-                            <img src="/img/auditorio.jpg" alt="Imagen relacionada 1" class="pin-image">
-                        </div>
-                    </div>
-                    
-                    
-                    <!-- Pin 2 -->
-                    <div class="pin" id="pin2" style="top: 45%; left: 40%;">
-                        <div class="info">
-                            <h3 class="blanco">Hipódromo de las Américas</h3>
-                            <p class="blanco">Visita el Hipódromo de las Américas, el lugar ideal para disfrutar de emocionantes carreras de caballos y eventos sociales.</p>
-                                <!-- <img src="/HALO-RevistaDigital/v2/img/2.jpg" alt="Imagen relacionada 2" class="pin-image"> -->
-                            <img src="/img/2.png" alt="Imagen relacionada 2" class="pin-image">
-                        </div>
-                    </div>
-                    
-                    <!-- Pin 3 -->
-                    <div class="pin" id="pin3" style="top: 22%; left: 55%;">
-                        <div class="info">
-                            <h3 class="blanco">Parque Bicentenario</h3>
-                            <p class="blanco">Explora el Parque Bicentenario, un espacio verde urbano que celebra la historia y la cultura de México.</p>
-                                 <!-- <img src="/HALO-RevistaDigital/v2/img/3.jpg" alt="Imagen relacionada 3" class="pin-image"> -->
-                            <img src="/img/3.png" alt="Imagen relacionada 3" class="pin-image">
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-            
 
-            
-            
-            
-        </div>
-        <div class="controls-container">
-            <div class="controls">
-                <a href="/page3.html" class="control prev">&lt;</a>
-                <span class="slide-indicator">4/8</span>
-                <a href="/page5.html" class="control next">&gt;</a>
-            </div>
-            <div class="index-menu">
-                <button class="index-toggle">Índice</button>
-                <div class="index-content">
-                    <a href="/page1.html" class="index-item">
-                        <img src="/img/Portadaindice.png" alt="Slide 1">
-                        <span class="index-title">Bienvenida</span> <!-- Título del Slide 1 -->
-                    </a>
-                    
-                    <a href="/page2.html" class="index-item">
-                        <img src="/img/recorrido-museo.png" alt="Slide 2">
-                        <span class="index-title">Explora México</span> <!-- Título del Slide 2 -->
-                    </a>
-                    
-                    <a href="/page3.html" class="index-item">
-                        <img src="/img/recorrido-teotihuacan.png" alt="Slide 3">
-                        <span class="index-title">Nuestra Cultura</span> <!-- Título del Slide 3 -->
-                    </a>
-                    
-                    <a href="/page4.html" class="index-item">
-                        <img src="/img/INDICE-mapa.png" alt="Slide 4">
-                        <span class="index-title">Gastronomía</span> <!-- Título del Slide 4 -->
-                    </a>
-                    
-                    <a href="/page5.html" class="index-item">
-                        <img src="/img/indicepodcast.png" alt="Slide 5">
-                        <span class="index-title">Historia y Tradición</span> <!-- Título del Slide 5 -->
-                    </a>
-                    
-                    <a href="/page6.html" class="index-item">
-                        <img src="/img/gastronomia.png" alt="Slide 6">
-                        <span class="index-title">Lugares Increíbles</span> <!-- Título del Slide 6 -->
-                    </a>
-                    
-                    <a href="/page7.html" class="index-item">
-                        <img src="/img/INDICE-filtro.png" alt="Slide 7">
-                        <span class="index-title">Naturaleza Viva</span> <!-- Título del Slide 7 -->
-                    </a>
-                    
-                    <a href="/page8.html" class="index-item">
-                        <img src="/img/inteligencia.png" alt="Slide 8">
-                        <span class="index-title">Arte y Artesanías</span> <!-- Título del Slide 8 -->
-                    </a>
-                    <!-- Agregar más slides aquí -->
+                    <!-- Botón 1 -->
+                    <button class="mapa-boton" id="boton1" style="top: 50%; left: 57%;"></button>
+                    <div class="info-popup" id="info1">
+                        <div class="info-content">
+                            <button class="close-btn" id="close1">&times;</button>
+                            <a href="https://g.co/kgs/jmVwx26">
+                                <h3 class="blanco">Auditorio Nacional</h3>
+                            </a>
+                            <p class="blanco">Descubre el Auditorio Nacional, uno de los principales recintos
+                                culturales de México.</p>
+                                <a href="https://g.co/kgs/jmVwx26">
+                            <img src="/img/auditorio.jpg" alt="Imagen relacionada 1" class="pin-image"></a>
+                        </div>
+                    </div>
+
+                    <!-- Botón 2 -->
+                    <button class="mapa-boton" id="boton2" style="top: 45%; left: 40%;"></button>
+                    <div class="info-popup" id="info2">
+                        <div class="info-content">
+                            <button class="close-btn" id="close2">&times;</button>
+                            <a href="https://maps.app.goo.gl/E7ZFWKZiGezoUAac6">
+                            <h3 class="blanco">Hipódromo de las Américas</h3></a>
+                            <p class="blanco">Visita el Hipódromo de las Américas, el lugar ideal para disfrutar de
+                                emocionantes carreras de caballos y eventos sociales.</p>
+                                <a href="https://maps.app.goo.gl/E7ZFWKZiGezoUAac6">
+                            <img src="/img/2.png" alt="Imagen relacionada 2" class="pin-image"></a>
+                        </div>
+                    </div>
+
+                    <!-- Botón 3 -->
+                    <button class="mapa-boton" id="boton3" style="top: 22%; left: 55%;"></button>
+                    <div class="info-popup" id="info3">
+                        <div class="info-content">
+                            <button class="close-btn" id="close3">&times;</button>
+                            <a href="https://g.co/kgs/c6rtYo1">
+                            <h3 class="blanco">Parque Bicentenario</h3></a>
+                            <p class="blanco">Explora el Parque Bicentenario, un espacio verde urbano que celebra la
+                                historia y la cultura de México.</p>
+                                <a href="https://g.co/kgs/c6rtYo1">
+                            <img src="/img/3.png" alt="Imagen relacionada 3" class="pin-image"></a>
+                        </div>
+                    </div>
                 </div>
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+    <div class="controls-container">
+        <div class="controls ">
+            <a href="/page3.html" class="control prev">&lt;</a>
+            <span class="slide-indicator">4/8</span>
+            <a href="/page5.html" class="control next">&gt;</a>
+        </div>
+        <div class="index-menu">
+            <button class="index-toggle">Índice</button>
+            <div class="index-content">
+                <a href="/page1.html" class="index-item">
+                    <img src="/img/Portadaindice.png" alt="Slide 1">
+                    <span class="index-title">Bienvenida</span> <!-- Título del Slide 1 -->
+                </a>
+
+                <a href="/page2.html" class="index-item">
+                    <img src="/img/recorrido-museo.png" alt="Slide 2">
+                    <span class="index-title">Explora México</span> <!-- Título del Slide 2 -->
+                </a>
+
+                <a href="/page3.html" class="index-item">
+                    <img src="/img/recorrido-teotihuacan.png" alt="Slide 3">
+                    <span class="index-title">Nuestra Cultura</span> <!-- Título del Slide 3 -->
+                </a>
+
+                <a href="/page4.html" class="index-item">
+                    <img src="/img/INDICE-mapa.png" alt="Slide 4">
+                    <span class="index-title">Gastronomía</span> <!-- Título del Slide 4 -->
+                </a>
+
+                <a href="/page5.html" class="index-item">
+                    <img src="/img/indicepodcast.png" alt="Slide 5">
+                    <span class="index-title">Historia y Tradición</span> <!-- Título del Slide 5 -->
+                </a>
+
+                <a href="/page6.html" class="index-item">
+                    <img src="/img/gastronomia.png" alt="Slide 6">
+                    <span class="index-title">Lugares Increíbles</span> <!-- Título del Slide 6 -->
+                </a>
+
+                <a href="/page7.html" class="index-item">
+                    <img src="/img/INDICE-filtro.png" alt="Slide 7">
+                    <span class="index-title">Naturaleza Viva</span> <!-- Título del Slide 7 -->
+                </a>
+
+                <a href="/page8.html" class="index-item">
+                    <img src="/img/inteligencia.png" alt="Slide 8">
+                    <span class="index-title">Arte y Artesanías</span> <!-- Título del Slide 8 -->
+                </a>
+                <!-- Agregar más slides aquí -->
             </div>
         </div>
+    </div>
 
     </div>
 </body>
 <script src="scripts.js"></script>
 <script>
     // Toggle menu for mobile
-    document.getElementById('menuIcon').addEventListener('click', function() {
+    document.getElementById('menuIcon').addEventListener('click', function () {
         document.getElementById('navLinks').classList.toggle('active');
     });
-     // Toggle the index menu on click
-     document.querySelector('.index-toggle').addEventListener('click', function() {
-            document.querySelector('.index-menu').classList.toggle('active');
+    // Toggle the index menu on click
+    document.querySelector('.index-toggle').addEventListener('click', function () {
+        document.querySelector('.index-menu').classList.toggle('active');
+    });
+    // scripts.js
+
+    document.querySelector('.index-toggle').addEventListener('click', function () {
+        const indexContent = document.querySelector('.index-content');
+        indexContent.style.display = indexContent.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.querySelector('.index-toggle').addEventListener('click', function () {
+        const indexContent = document.querySelector('.index-content');
+        indexContent.classList.toggle('show');
+    });
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+    const botones = document.querySelectorAll('.mapa-boton');
+    const infoPopups = document.querySelectorAll('.info-popup');
+    const closeButtons = document.querySelectorAll('.close-btn');
+
+    // Función para mostrar el popup
+    function mostrarPopup(index) {
+        // Cerrar cualquier otra caja de información abierta
+        infoPopups.forEach(info => info.style.display = 'none');
+
+        // Mostrar la información correspondiente al botón
+        const infoId = 'info' + (index + 1);
+        document.getElementById(infoId).style.display = 'block';
+    }
+
+    // Añadir eventos de click y touchstart a los botones
+    botones.forEach((boton, index) => {
+        boton.addEventListener('click', function (event) {
+            event.stopPropagation(); // Evitar cerrar al hacer clic en el botón
+            mostrarPopup(index);
         });
-        // scripts.js
 
-document.querySelector('.index-toggle').addEventListener('click', function() {
-    const indexContent = document.querySelector('.index-content');
-    indexContent.style.display = indexContent.style.display === 'block' ? 'none' : 'block';
+        boton.addEventListener('touchstart', function (event) {
+            event.stopPropagation(); // Evitar cerrar al tocar el botón
+            mostrarPopup(index);
+        });
+    });
+
+    // Cerrar la información al hacer clic en el botón de cerrar
+    closeButtons.forEach((closeBtn, index) => {
+        closeBtn.addEventListener('click', function () {
+            document.getElementById('info' + (index + 1)).style.display = 'none';
+        });
+
+        closeBtn.addEventListener('touchstart', function () {
+            document.getElementById('info' + (index + 1)).style.display = 'none';
+        });
+    });
+
+    // Cerrar la información al hacer clic fuera de la caja de información
+    document.addEventListener('click', function () {
+        infoPopups.forEach(info => info.style.display = 'none');
+    });
+
+    document.addEventListener('touchstart', function () {
+        infoPopups.forEach(info => info.style.display = 'none');
+    });
+
+    // Evitar que el clic o touchstart dentro de la caja cierre la caja
+    infoPopups.forEach((popup) => {
+        popup.addEventListener('click', function (event) {
+            event.stopPropagation();
+        });
+
+        popup.addEventListener('touchstart', function (event) {
+            event.stopPropagation();
+        });
+    });
 });
 
-document.querySelector('.index-toggle').addEventListener('click', function() {
-    const indexContent = document.querySelector('.index-content');
-    indexContent.classList.toggle('show');
-});
+
+
 
 </script>
-</html>
 
+</html>
